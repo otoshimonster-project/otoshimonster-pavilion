@@ -32,7 +32,7 @@ body {
     animation-name: floatVertical;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    margin: -30px 5px; /* 上下重なり、左右の余白狭め */
+    margin: 0px 5px; /* 上下重なり、左右の余白狭め */
   }
   
   .animated-image:hover {
