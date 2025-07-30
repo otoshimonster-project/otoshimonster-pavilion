@@ -26,7 +26,7 @@ body {
 }
 
 .animated-image {
-    width: 280px;
+    width: 240px;
     height: auto;          /* 高さ自動で縦横比を維持 */
     object-fit: contain;   /* 縦横比を保ちながら画像を収める */
     transition: transform 0.5s ease, opacity 0.5s ease;
