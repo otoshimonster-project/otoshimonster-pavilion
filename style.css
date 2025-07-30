@@ -16,7 +16,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: -40px; /* 行ごとに少し重ねる */
+    margin-top: -20px; /* 行ごとに少し重ねる */
   }
   
   .row.offset {
