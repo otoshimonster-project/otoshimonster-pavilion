@@ -8,7 +8,7 @@ body {
 /* 追加: ヘッダー */
 .site-header {
     background-color: #f0f0f0;
-    padding: 20px 20px 20px;
+    padding: 20px 40px 40px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
 }
