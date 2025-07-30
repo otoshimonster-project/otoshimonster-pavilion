@@ -9,6 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 画像情報リスト（自由に追加可能）
     const imageData = [
+        {id: "1yaHh6fHlzO9RqGWhC4Qs3LFR5FGqZycn",title: "花のにおいがするかも！！ポーチ",description: "やさしい　ダンスをするのがすき。"},
+{id: "1JuoSp-l6r6gfERWGQtjiJEZdbY-1VIBQ",title: "一円モンスターがおー！",description: "みためはこわいけどともだちになりやすい。ひろったひとには、かみついたり、けったり、たたいたりしてひろったひとをおいはらう。※たまにけいさつもたたく。"},
+{id: "1We2E-0ljyyN7t0hA7W5x60H9R-_NwkWI",title: "ワンポチ",description: "とても人懐っこい。ポーチおとモン。自分が忘れ物だと気づいていない。いつもしっぽを振っている。"},
+{id: "1KsOgU7SvD8G6IGS6XVRmcB943tQnj9vm",title: "本田さん",description: "いつも頭をかかえている。読んだ本の内ようはおぼえている。本を読むたびに頭の本はふえる。"},
+{id: "14dY4qhRdl5hewi3KsBce8po9dMXo0zw8",title: "ふでうさぎ",description: "ふでうさぎのせいかくはげんきで、あかるいせいかく。くちぐせは「う〜う〜」だよ！せいたいはろうかのすみ。"},
+{id: "1GV5Tr5kR2rwSMms6WrVfaDUS9-JoZhiQ",title: "AI",description: "電子機器に村してすいよせられるようにちかづく。電子機器に触れると、中のデータを全てぬきとる。"},
+{id: "1b8DGFyw1rSIXBKS-GUIovX16w8CdAnKL",title: "まじゅつしエピツーン",description: "頭はそれほど良くないが、ま法をつかえる。いがいにせんさい"},
+{id: "1zEsA_fKgk5NGiV_Jli4U3GaG-b1n1PRu",title: "かきかきけしゴム",description: "けすとだんだんみえなくなっていく。けされるとチュピーとなく。けしゴムの中にあるえんぴつをとりだしてかける。"},
+{id: "1F_SnGG1jpDG0KfStnh_Ll2V1rUjhPD3S",title: "AI",description: "スパコンにふれた場合スパコンの内部データをぬき取る"},
         {id: "1AGa_kVcydsBBB1nLw9JQYDHoB1SqECst",title: "ちびえんぴつ・ちびけしごむ",description: "よなか、もちぬしのふでばこの長い・大きいえんぴつ・けしごむと、いれかわる。"},
         {id: "174HSzopof99eWEPxJwYr-9ZfgUYoVaMC",title: "ACBRVZY",description: "YVDBA　せいせくのう"},
         {id: "1AW-zNL_NOvpw-O4r6X4p7_YRhCKoYvAY",title: "ボールのペン",description: "ボールで、できてるから、おもくてうんどうが大のにがて"},
@@ -42,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         row.classList.add('row');
         if (rowCount % 2 === 0) row.classList.add('offset');
 
-        const countInRow = rowCount % 2 === 1 ? 5 : 6;
+        const countInRow = rowCount % 2 === 1 ? 7 : 8;
         for (let i = 0; i < countInRow && index < imageData.length; i++, index++) {
             const data = imageData[index];
             const img = document.createElement('img');
