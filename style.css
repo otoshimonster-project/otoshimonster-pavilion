@@ -3,28 +3,27 @@ body {
     text-align: center;
     margin: 0;
     font-family: sans-serif;
-}
-
-.gallery {
+  }
+  
+  .gallery {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    gap: -100px; /* 縦の間隔なしに */
-}
-
-.row {
+    padding: 10px;
+  }
+  
+  .row {
     display: flex;
-    gap: -100px; /* 横の余白を半分に */
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.row.offset {
-    margin-left: 50px;
-}
-
-.animated-image {
+    margin-top: -40px; /* 行ごとに少し重ねる */
+  }
+  
+  .row.offset {
+    margin-left: 30px;
+  }
+  
+  .animated-image {
     width: 200px;
     height: auto;
     object-fit: contain;
@@ -33,24 +32,24 @@ body {
     animation-name: floatVertical;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    margin-top: -20px; /* 縦の重なりを演出 */
-}
-
-.animated-image:hover {
+    margin: -30px 5px; /* 上下重なり、左右の余白狭め */
+  }
+  
+  .animated-image:hover {
     transform: scale(1.1) rotate(5deg);
     opacity: 0.8;
-}
-
-@keyframes floatVertical {
+  }
+  
+  @keyframes floatVertical {
     0%   { transform: translateY(0); }
     25%  { transform: translateY(-10px); }
     50%  { transform: translateY(10px); }
     75%  { transform: translateY(-5px); }
     100% { transform: translateY(0); }
-}
-
-/* Overlay */
-.overlay {
+  }
+  
+  /* Overlay */
+  .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -61,13 +60,13 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-}
-
-.overlay.hidden {
+  }
+  
+  .overlay.hidden {
     display: none;
-}
-
-.overlay-content {
+  }
+  
+  .overlay-content {
     position: relative;
     background: white;
     padding: 30px;
@@ -76,36 +75,37 @@ body {
     width: 500px;
     text-align: center;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
-}
-
-.overlay-content h2 {
+  }
+  
+  .overlay-content h2 {
     margin-bottom: 15px;
     font-size: 1.5rem;
     color: #444;
-}
-
-.overlay-content img {
+  }
+  
+  .overlay-content img {
     max-width: 100%;
     height: auto;
     object-fit: contain;
     border-radius: 5px;
-}
-
-#overlay-description {
+  }
+  
+  #overlay-description {
     margin-top: 15px;
     font-size: 1rem;
     color: #333;
-}
-
-.close-button {
+  }
+  
+  .close-button {
     position: absolute;
     top: 10px;
     right: 15px;
     font-size: 2rem;
     color: #aaa;
     cursor: pointer;
-}
-
-.close-button:hover {
+  }
+  
+  .close-button:hover {
     color: #333;
-}
+  }
+  
