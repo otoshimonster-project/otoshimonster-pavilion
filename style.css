@@ -10,12 +10,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 0px;
     gap: 0px;
 }
 
 .row {
     display: flex;
+    margin-bottom: 10px; /* 必要なら 5px〜に調整 */
     gap: 0px;
     flex-wrap: wrap;
     justify-content: center;
@@ -26,7 +27,7 @@ body {
 }
 
 .animated-image {
-    width: 240px;
+    width: 220px;
     height: auto;          /* 高さ自動で縦横比を維持 */
     object-fit: contain;   /* 縦横比を保ちながら画像を収める */
     transition: transform 0.5s ease, opacity 0.5s ease;
@@ -34,6 +35,7 @@ body {
     animation-name: floatVertical;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    margin: 0; /* 念のため */
 }
 
 .animated-image:hover {
