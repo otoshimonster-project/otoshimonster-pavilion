@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         row.classList.add('row');
         if (rowCount % 2 === 0) row.classList.add('offset');
 
-        const countInRow = rowCount % 2 === 1 ? 7 : 8;
+        const countInRow = rowCount % 2 === 1 ? 6 : 7;
         for (let i = 0; i < countInRow && index < imageData.length; i++, index++) {
             const data = imageData[index];
             const img = document.createElement('img');
