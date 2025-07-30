@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    gap: 0; /* 縦の間隔なしに */
+    gap: -30px; /* 縦の間隔なしに */
 }
 
 .row {
@@ -33,7 +33,7 @@ body {
     animation-name: floatVertical;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    margin-top: -50px; /* 縦の重なりを演出 */
+    margin-top: -20px; /* 縦の重なりを演出 */
 }
 
 .animated-image:hover {
