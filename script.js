@@ -71,8 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 overlay.classList.remove('hidden');
                 overlayImage.src = `https://drive.google.com/thumbnail?id=${data.id}&sz=w1000`;
                 
-                if (data.title === "aaaa") {
-                    overlayTitle.innerHTML = `<span class="font-fude">aaaa</span>`;
+                if (data.title === "aaaaACBRVZY") {
+                    overlayTitle.innerHTML = `<span class="font-fude">aaaa</span>ACBRVZY`;
                 } else {
                     overlayTitle.textContent = data.title;
                 }
