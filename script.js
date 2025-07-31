@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {id: "1zEsA_fKgk5NGiV_Jli4U3GaG-b1n1PRu",title: "かきかきけしゴム",description: "けすとだんだんみえなくなっていく。けされるとチュピーとなく。けしゴムの中にあるえんぴつをとりだしてかける。"},
         {id: "1F_SnGG1jpDG0KfStnh_Ll2V1rUjhPD3S",title: "AI",description: "スパコンにふれた場合スパコンの内部データをぬき取る"},
         {id: "1AGa_kVcydsBBB1nLw9JQYDHoB1SqECst",title: "ちびえんぴつ・ちびけしごむ",description: "よなか、もちぬしのふでばこの長い・大きいえんぴつ・けしごむと、いれかわる。"},
-        {id: "174HSzopof99eWEPxJwYr-9ZfgUYoVaMC",title: "ACBRVZY",description: "YVDBA　せいせくのう"},
+        {id: "174HSzopof99eWEPxJwYr-9ZfgUYoVaMC",title: "aaaaACBRVZY",description: "YVDBA　せいせくのう"},
         {id: "1AW-zNL_NOvpw-O4r6X4p7_YRhCKoYvAY",title: "ボールのペン",description: "ボールで、できてるから、おもくてうんどうが大のにがて"},
         {id: "1SlDbzr0iq4uZgBsPaQxGhTNV_mqfGFxL",title: "くさすぎたおる",description: "くささ（れべる）ひろしのくつしたとおなじ（2ばい）"},
         {id: "1-7TkE3uYzZ1trKoqyPI-ZpI1YYYk2uiK",title: "ふでばーんねこ",description: ""},
@@ -70,6 +70,13 @@ document.addEventListener("DOMContentLoaded", () => {
             img.addEventListener('click', () => {
                 overlay.classList.remove('hidden');
                 overlayImage.src = `https://drive.google.com/thumbnail?id=${data.id}&sz=w1000`;
+                
+                if (data.title === "aaaa") {
+                    overlayTitle.innerHTML = `<span class="font-fude">aaaa</span>`;
+                } else {
+                    overlayTitle.textContent = data.title;
+                }
+
                 overlayTitle.textContent = data.title;
                 overlayDescription.textContent = data.description;
             });

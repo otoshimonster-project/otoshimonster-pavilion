@@ -31,6 +31,16 @@ body {
 }
 
 /* 既存のスタイル以下略（そのまま） */
+
+@font-face {
+    font-family: 'TokuseiFont';
+    src: url('fonts/Calligraphr-Regular.ttf') format('truetype');
+  }
+  
+  .font-fude {
+    font-family: 'Tokuseifont', sans-serif;
+  }
+  
 .gallery {
     display: flex;
     flex-direction: column;
