@@ -77,7 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     overlayTitle.textContent = data.title;
                 }
 
-                overlayTitle.textContent = data.title;
                 overlayDescription.textContent = data.description;
             });
 
