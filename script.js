@@ -6,7 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const overlayDescription = document.getElementById('overlay-description');
     const closeButton = document.querySelector('.close-button');
 
-    const imageData = [ {id: "1yaHh6fHlzO9RqGWhC4Qs3LFR5FGqZycn",title: "花のにおいがするかも！！ポーチ",description: "やさしい　ダンスをするのがすき。"},
+    const imageData = [{id: "1TNp77S_Do70vqrOOzxMeVNzYiHmH4b2z",title: "魁扇子（かいせんす）",description: "歩くとカサカサパキパキと不気味な音を立てる。話すことはない。"},
+        {id: "1K5rSbodBHBmXHtrPcUrKjdGTF5bOa9xF",title: "ウワギーグ",description: "人間の言葉を理解できるようだが、発生することはできないらしい。こどもがだいすき。さむがっている人を見かけると、その暖かい体で対象を包んで温めてくれる。"},
+        {id: "1rCwvZ2-s0arp5pVVjfF8VtVz3v6_9RYJ",title: "ふらんでよ〜",description: "晴雨兼用だけど暑さに弱く、日傘のになるのはキライ。すぐスタバで休憩したくなる。韓流ドラマを見てよく泣く😭"},
+         {id: "1yaHh6fHlzO9RqGWhC4Qs3LFR5FGqZycn",title: "花のにおいがするかも！！ポーチ",description: "やさしい　ダンスをするのがすき。"},
         {id: "1JuoSp-l6r6gfERWGQtjiJEZdbY-1VIBQ",title: "一円モンスターがおー！",description: "みためはこわいけどともだちになりやすい。ひろったひとには、かみついたり、けったり、たたいたりしてひろったひとをおいはらう。※たまにけいさつもたたく。"},
         {id: "1We2E-0ljyyN7t0hA7W5x60H9R-_NwkWI",title: "ワンポチ",description: "とても人懐っこい。ポーチおとモン。自分が忘れ物だと気づいていない。いつもしっぽを振っている。"},
         {id: "1KsOgU7SvD8G6IGS6XVRmcB943tQnj9vm",title: "本田さん",description: "いつも頭をかかえている。読んだ本の内ようはおぼえている。本を読むたびに頭の本はふえる。"},
@@ -36,10 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
         {id: "1nJPAQ5vTl3o_nPcDAV33l_Fj5_ewsNsT",title: "アイスリングちゃん",description: "くちぐせはリンリンです"},
         {id: "1m1F_1-Th9A-9sxG5Cp3abzoIo8Ei4RMG",title: "テッシュー",description: "くちぐせは、シューシューです。"},
         {id: "1ja8AYWDuSppvHbAWsKdWNKRIkzrTBUEd",title: "ハンカチくん",description: "くちぐせかちかち"},
-        {id: "1LWzpBRJDQ5w8AtmW68-_ARnBxifOWWXb",title: "けしごむ",description: "いつもダラーてなってる すんでるばしょはけしごむせんたー いつもけしごむせんたーであそんでる。"},
-        {id: "1TNp77S_Do70vqrOOzxMeVNzYiHmH4b2z",title: "魁扇子（かいせんす）",description: "歩くとカサカサパキパキと不気味な音を立てる。話すことはない。"},
-        {id: "1K5rSbodBHBmXHtrPcUrKjdGTF5bOa9xF",title: "ウワギーグ",description: "人間の言葉を理解できるようだが、発生することはできないらしい。こどもがだいすき。さむがっている人を見かけると、その暖かい体で対象を包んで温めてくれる。"},
-        {id: "1rCwvZ2-s0arp5pVVjfF8VtVz3v6_9RYJ",title: "ふらんでよ〜",description: "晴雨兼用だけど暑さに弱く、日傘のになるのはキライ。すぐスタバで休憩したくなる。韓流ドラマを見てよく泣く😭"}];
+        {id: "1LWzpBRJDQ5w8AtmW68-_ARnBxifOWWXb",title: "けしごむ",description: "いつもダラーてなってる すんでるばしょはけしごむせんたー いつもけしごむせんたーであそんでる。"}
+        ];
 
     let index = 0;
     let rowCount = 0;
