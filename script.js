@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
         {id: "1m1F_1-Th9A-9sxG5Cp3abzoIo8Ei4RMG",title: "テッシュー",description: "くちぐせは、シューシューです。"},
         {id: "1ja8AYWDuSppvHbAWsKdWNKRIkzrTBUEd",title: "ハンカチくん",description: "くちぐせかちかち"},
         {id: "1LWzpBRJDQ5w8AtmW68-_ARnBxifOWWXb",title: "けしごむ",description: "いつもダラーてなってる すんでるばしょはけしごむせんたー いつもけしごむせんたーであそんでる。"},
-        {id: "1TNp77S_Do70vqrOOzxMeVNzYiHmH4b2z",title: "魁扇子（かいせんす）",description: "歩くとカサカサパキパキと不気味な音を立てる。話すことはない。"}];
+        {id: "1TNp77S_Do70vqrOOzxMeVNzYiHmH4b2z",title: "魁扇子（かいせんす）",description: "歩くとカサカサパキパキと不気味な音を立てる。話すことはない。"},
+        {id: "1K5rSbodBHBmXHtrPcUrKjdGTF5bOa9xF",title: "ウワギーグ",description: "人間の言葉を理解できるようだが、発生することはできないらしい。こどもがだいすき。さむがっている人を見かけると、その暖かい体で対象を包んで温めてくれる。"},
+        {id: "1rCwvZ2-s0arp5pVVjfF8VtVz3v6_9RYJ",title: "ふらんでよ〜",description: "晴雨兼用だけど暑さに弱く、日傘のになるのはキライ。すぐスタバで休憩したくなる。韓流ドラマを見てよく泣く😭"}];
 
     let index = 0;
     let rowCount = 0;
