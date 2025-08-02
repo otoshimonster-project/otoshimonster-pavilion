@@ -36,7 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
         {id: "1nJPAQ5vTl3o_nPcDAV33l_Fj5_ewsNsT",title: "アイスリングちゃん",description: "くちぐせはリンリンです"},
         {id: "1m1F_1-Th9A-9sxG5Cp3abzoIo8Ei4RMG",title: "テッシュー",description: "くちぐせは、シューシューです。"},
         {id: "1ja8AYWDuSppvHbAWsKdWNKRIkzrTBUEd",title: "ハンカチくん",description: "くちぐせかちかち"},
-        {id: "1LWzpBRJDQ5w8AtmW68-_ARnBxifOWWXb",title: "けしごむ",description: "いつもダラーてなってる すんでるばしょはけしごむせんたー いつもけしごむせんたーであそんでる。"}];
+        {id: "1LWzpBRJDQ5w8AtmW68-_ARnBxifOWWXb",title: "けしごむ",description: "いつもダラーてなってる すんでるばしょはけしごむせんたー いつもけしごむせんたーであそんでる。"},
+        {id: "1TNp77S_Do70vqrOOzxMeVNzYiHmH4b2z",title: "魁扇子（かいせんす）",description: "歩くとカサカサパキパキと不気味な音を立てる。話すことはない。"}];
 
     let index = 0;
     let rowCount = 0;
