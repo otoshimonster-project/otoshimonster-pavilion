@@ -41,47 +41,119 @@ document.addEventListener("DOMContentLoaded", () => {
         {id: "1ja8AYWDuSppvHbAWsKdWNKRIkzrTBUEd",title: "ハンカチくん",description: "くちぐせかちかち"},
         {id: "1LWzpBRJDQ5w8AtmW68-_ARnBxifOWWXb",title: "けしごむ",description: "いつもダラーてなってる すんでるばしょはけしごむせんたー いつもけしごむせんたーであそんでる。"}
         ];
+// Googleフォームから作品を取得
+const FORM_API_URL = "https://script.google.com/macros/s/AKfycbwmlcmIFpOZdzhqykFinixIJsFifaQqBLVfmduqlW6tNh-n0B_e8Xp-0iFfJPgP6tWO7g/exec";
+
+function loadFormWorks() {
+    return new Promise((resolve) => {
+        const callbackName = "receiveFormWorks";
+
+        window[callbackName] = function(data) {
+            delete window[callbackName];
+            script.remove();
+            resolve(data);
+        };
+
+        const script = document.createElement("script");
+
+        script.src =
+            FORM_API_URL +
+            "?callback=" +
+            callbackName;
+
+        script.onerror = function() {
+            console.error("Googleフォームの作品データを取得できませんでした。");
+            delete window[callbackName];
+            script.remove();
+            resolve([]);
+        };
+
+        document.body.appendChild(script);
+    });
+}
+    
+    // Googleフォームの作品を読み込んでから、ギャラリーを表示
+loadFormWorks().then((formWorks) => {
+
+    // 既存作品＋フォームから応募された作品
+    const allImageData = imageData.concat(formWorks);
 
     let index = 0;
     let rowCount = 0;
 
-    while (index < imageData.length) {
+    while (index < allImageData.length) {
+
         rowCount++;
+
         const row = document.createElement('div');
         row.classList.add('row');
-        if (rowCount % 2 === 0) row.classList.add('offset');
+
+        if (rowCount % 2 === 0) {
+            row.classList.add('offset');
+        }
 
         const countInRow = rowCount % 2 === 1 ? 6 : 7;
-        console.log(`row ${rowCount} (${rowCount % 2 === 1 ? 'odd' : 'even'}): ${countInRow} images`);
 
-        for (let i = 0; i < countInRow && index < imageData.length; i++, index++) {
-            const data = imageData[index];
+        console.log(
+            `row ${rowCount} (${rowCount % 2 === 1 ? 'odd' : 'even'}): ${countInRow} images`
+        );
+
+        for (
+            let i = 0;
+            i < countInRow && index < allImageData.length;
+            i++, index++
+        ) {
+
+            const data = allImageData[index];
+
             const img = document.createElement('img');
+
             img.className = 'animated-image';
-            img.src = `https://drive.google.com/thumbnail?id=${data.id}&sz=w500`;
+
+            img.src =
+                `https://drive.google.com/thumbnail?id=${data.id}&sz=w500`;
+
             img.alt = data.title;
 
             // アニメーション設定
             setTimeout(() => {
                 img.style.opacity = 1;
             }, index * 300);
-            const duration = (Math.random() * 3 + 2).toFixed(2);
-            const delay = (Math.random() * 2).toFixed(2);
-            img.style.animationDuration = `${duration}s`;
-            img.style.animationDelay = `${delay}s`;
+
+            const duration =
+                (Math.random() * 3 + 2).toFixed(2);
+
+            const delay =
+                (Math.random() * 2).toFixed(2);
+
+            img.style.animationDuration =
+                `${duration}s`;
+
+            img.style.animationDelay =
+                `${delay}s`;
 
             // オーバーレイ設定
             img.addEventListener('click', () => {
+
                 overlay.classList.remove('hidden');
-                overlayImage.src = `https://drive.google.com/thumbnail?id=${data.id}&sz=w1000`;
-                
+
+                overlayImage.src =
+                    `https://drive.google.com/thumbnail?id=${data.id}&sz=w1000`;
+
                 if (data.title === "aaaaACBRVZY") {
-                    overlayTitle.innerHTML = `<span class="font-fude">aaaa</span>ACBRVZY`;
+
+                    overlayTitle.innerHTML =
+                        `<span class="font-fude">aaaa</span>ACBRVZY`;
+
                 } else {
-                    overlayTitle.textContent = data.title;
+
+                    overlayTitle.textContent =
+                        data.title;
+
                 }
 
-                overlayDescription.textContent = data.description;
+                overlayDescription.textContent =
+                    data.description;
             });
 
             row.appendChild(img);
@@ -89,6 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         gallery.appendChild(row);
     }
+});
 
     // オーバーレイ閉じる
     closeButton.addEventListener('click', () => {
