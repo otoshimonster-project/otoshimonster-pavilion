@@ -57,9 +57,11 @@ function loadFormWorks() {
         const script = document.createElement("script");
 
         script.src =
-            FORM_API_URL +
-            "?callback=" +
-            callbackName;
+    FORM_API_URL +
+    "?callback=" +
+    callbackName +
+    "&t=" +
+    Date.now();
 
         script.onerror = function() {
             console.error("Googleフォームの作品データを取得できませんでした。");
