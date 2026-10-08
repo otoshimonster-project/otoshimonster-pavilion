@@ -111,7 +111,7 @@ loadFormWorks().then((formWorks) => {
             img.className = 'animated-image';
 
             img.src =
-                `https://drive.google.com/thumbnail?id=${data.id}&sz=w500`;
+    `https://drive.google.com/uc?export=view&id=${data.id}`;
 
             img.alt = data.title;
 
@@ -138,7 +138,7 @@ loadFormWorks().then((formWorks) => {
                 overlay.classList.remove('hidden');
 
                 overlayImage.src =
-                    `https://drive.google.com/thumbnail?id=${data.id}&sz=w1000`;
+    `https://drive.google.com/uc?export=view&id=${data.id}`;
 
                 if (data.title === "aaaaACBRVZY") {
 
