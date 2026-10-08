@@ -112,8 +112,18 @@ loadFormWorks().then((formWorks) => {
 
             img.className = 'animated-image';
 
-            img.src =
+            const imageUrl =
     `https://drive.google.com/thumbnail?id=${data.id}&sz=w500`;
+
+console.log("作品:", data.title);
+console.log("画像ID:", data.id);
+console.log("画像URL:", imageUrl);
+
+img.src = imageUrl;
+
+img.onerror = () => {
+    console.error("画像読み込み失敗:", imageUrl);
+};
 
             img.alt = data.title;
 
