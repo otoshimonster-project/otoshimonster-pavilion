@@ -77,8 +77,30 @@ function loadFormWorks() {
     // Googleフォームの作品を読み込んでから、ギャラリーを表示
 loadFormWorks().then((formWorks) => {
 
+    // Googleフォームから取得した作品の画像IDを整理する
+    const normalizedFormWorks = formWorks.map((work) => {
+
+        // すでにidがある場合はそのまま使う
+        if (work.id) {
+            return work;
+        }
+
+        // idがない場合はimageのURLからGoogle DriveのIDを取り出す
+        const imageText = String(work.image || "");
+        const match = imageText.match(/[-\w]{25,}/);
+        const imageId = match ? match[0] : "";
+
+        return {
+            ...work,
+            id: imageId
+        };
+    });
+
+    // 確認用
+    console.log("フォーム作品:", normalizedFormWorks);
+
     // 既存作品＋フォームから応募された作品
-    const allImageData = imageData.concat(formWorks);
+    const allImageData = imageData.concat(normalizedFormWorks);
 
     let index = 0;
     let rowCount = 0;
